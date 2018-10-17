@@ -1,0 +1,27 @@
+.announcement-container {
+    width: 500px;
+    background-color: aliceblue;
+    color: black;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2px;
+}
+
+.announcement-container > div {
+    color: black;
+}
+
+.announcement-title {
+    font-size: 20px;
+}
+
+.announcement-body {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.announcement-footer {
+    font-size: 12px;
+    text-align: end;
+    margin-top: 1.5em;
+}

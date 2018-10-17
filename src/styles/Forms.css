@@ -1,0 +1,60 @@
+input {
+    height: 40px;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+input:disabled {
+    color: gray;
+    background-color: gray;
+}
+
+.error {
+    border: 1px red solid;
+}
+.error:focus {
+    outline: none !important;
+}
+
+textarea {
+    resize: none;
+    height: 300px;
+    width: 100%;
+    color: black;
+    font-size: 17px;
+    border-radius: 2px;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: aliceblue 1px solid;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.Form-Container {
+    width: 600px;
+    height: auto;
+    padding: 2em;
+}
