@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import '../styles/Root.css';
 
 class RootPage extends Component {
     render() {
         return (
-            <div>This is the root page</div>
+            <div>
+                <h1>MINT</h1>
+                <div className="links-container" style={{display: 'flex', flexDirection: 'column'}}>
+                    <Link to="/feedback" style={{margin: 5}}>Create Announcement</Link>
+                    <Link to="/announcements" style={{margin: 5}}>Add Feedback</Link>
+                </div>
+            </div>
         );
     }
 }
