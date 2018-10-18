@@ -8,8 +8,8 @@ class RootPage extends Component {
             <div>
                 <h1>MINT</h1>
                 <div className="links-container" style={{display: 'flex', flexDirection: 'column'}}>
-                    <Link to="/feedback" style={{margin: 5}}>Create Announcement</Link>
-                    <Link to="/announcements" style={{margin: 5}}>Add Feedback</Link>
+                    <Link to="/feedback" style={{margin: 5}}>Add Feedback</Link>
+                    <Link to="/announcements" style={{margin: 5}}>Create Announcement</Link>
                 </div>
             </div>
         );

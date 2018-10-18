@@ -48,7 +48,7 @@ class FeedbackView extends Component {
 
     render() {
         return (
-            <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
+            <div style={{display: 'flex', justifyContent: 'center', marginTop: 50, alignItems:'center', flexDirection:'column'}}>
                 <h1>Feedback</h1>
                 <div className="Form-Container">
                     <div>
