@@ -35,7 +35,11 @@ class FeedbackView extends Component {
         if (this.state.email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
             && this.state.feedback.length > 10) {
             this.setState({loading: true}, () => {
-                addFeedback({email: this.state.email, feedback: this.state.feedback, createdAt: moment().valueOf()}).then(() => {
+                addFeedback({
+                    email: this.state.email,
+                    feedback: this.state.feedback,
+                    createdAt: moment().valueOf()
+                }).then(() => {
                     alert('Thank you for the feedback!');
                     this.setState({loading: false});
                 }).catch((e) => {
@@ -48,9 +52,20 @@ class FeedbackView extends Component {
 
     render() {
         return (
-            <div style={{display: 'flex', justifyContent: 'center', marginTop: 50, alignItems:'center', flexDirection:'column'}}>
-                <h1>Feedback</h1>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: 50,
+                alignItems: 'center',
+                flexDirection: 'column'
+            }}>
+                <h2>Thank you for trying out MINT!</h2>
+                <br/>
+                <h2>Let us know about any concerns you have</h2>
                 <div className="Form-Container">
+                    <div className="image-container-wide">
+                        <img src={require('../assets/Interface-Image.png')}/>
+                    </div>
                     <div>
                         <p>Email</p>
                         <input name="email" autoComplete="off" maxLength={50} onChange={this._handleEmailChange}
@@ -62,7 +77,8 @@ class FeedbackView extends Component {
                                   name="feedback" className={this.state.textAreaError ? 'error' : ''}/>
                         <span>{this.state.wordCount}/{this.maxCharacterCount}</span>
                     </div>
-                    <div style={{flex:1, alignContent:'flex-end', justifyContent:'flex-end', alignItems:'flex-end'}}>
+                    <div
+                        style={{flex: 1, alignContent: 'flex-end', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
                         <button onClick={this._validateInput}
                                 disabled={this.state.emailError || this.state.textAreaError || this.state.loading}>Submit
                         </button>

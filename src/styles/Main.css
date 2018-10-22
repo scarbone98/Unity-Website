@@ -1,7 +1,26 @@
+@font-face {
+    font-family: 'Fipps';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/Fipps-Regular.otf');
+}
 * {
-    font-family: Poppins, sans-serif;
+    font-family: Fipps, sans-serif;
     letter-spacing: 0.15em;
     box-sizing: border-box;
     margin: 0;
     color: azure;
+}
+
+input {
+    font-family: Poppins, sans-serif;
+}
+
+textarea {
+    font-family: Poppins, sans-serif;
+}
+
+.image-container-wide > img {
+    width: 15vw;
+    min-width: 400px;
 }
