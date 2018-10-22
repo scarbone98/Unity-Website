@@ -70,7 +70,7 @@ class AnnouncementsView extends Component {
         });
         return (
             <div style={{display: 'flex', alignItems: 'center', marginTop: 50, flexDirection:'column'}}>
-                <h1>Create Announcement</h1>
+                <h2>Create Announcement</h2>
                 <div className="Form-Container">
                     <div>
                         <p>Title</p>
