@@ -37,9 +37,9 @@ class FeedbackView extends Component {
             this.setState({loading: true}, () => {
                 addFeedback({email: this.state.email, feedback: this.state.feedback, createdAt: moment().valueOf()}).then(() => {
                     alert('Thank you for the feedback!');
+                    this.setState({loading: false});
                 }).catch((e) => {
                     alert(e.message);
-                }).finally(()=>{
                     this.setState({loading: false});
                 });
             });

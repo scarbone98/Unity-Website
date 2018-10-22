@@ -30,11 +30,11 @@ class AnnouncementsView extends Component {
         this.setState({loading: true});
         addAnnouncement({title: this.state.title, description: this.state.description, createdAt: moment().valueOf()}).then(() => {
             alert('Successfully created announcement');
+            this.setState({loading: false});
         }).catch(e => {
             alert(e.message);
-        }).finally(() => {
-            this.setState({loading: false})
-        })
+            this.setState({loading: false});
+        });
     };
 
     _renderAnnouncement = (announcement, index) => {
