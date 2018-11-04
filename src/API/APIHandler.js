@@ -3,9 +3,13 @@ import firebase from '../init/Firebase';
 
 export function fetchFeedback() {
     return new Promise((resolve, reject) => {
-        firebase.firestore().collection('feedback').get().then(()=>{
-            resolve();
-        }).catch((e)=>{
+        firebase.firestore().collection('feedback').get().then((data) => {
+            let documents = [];
+            data.forEach((document) => {
+                documents.push(document.data())
+            });
+            resolve(documents);
+        }).catch((e) => {
             reject(e);
         });
     });
@@ -18,9 +22,9 @@ export function addFeedback(feedbackObject) {
             email,
             feedback,
             createdAt
-        }).then(()=>{
+        }).then(() => {
             resolve();
-        }).catch((e)=>{
+        }).catch((e) => {
             reject(e);
         });
     });
@@ -33,9 +37,9 @@ export function addAnnouncement(announcement) {
             title,
             description,
             createdAt
-        }).then(()=>{
+        }).then(() => {
             resolve();
-        }).catch((e)=>{
+        }).catch((e) => {
             reject(e);
         });
     });

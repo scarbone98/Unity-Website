@@ -39,7 +39,7 @@ class AnnouncementsView extends Component {
 
     _renderAnnouncement = (announcement, index) => {
         return (
-            <div className="announcement-container">
+            <div className="announcement-container" key={index}>
                 <div className="announcement-title">
                     {announcement.title}
                 </div>
